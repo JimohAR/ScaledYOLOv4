@@ -22,7 +22,7 @@ if uploaded_file:
         os.system("python detect.py --img 416")
 
         images = []
-        for imageName in glob.glob("inference/output/*.jpg"):  # assuming JPG
+        for imageName in glob.glob("inference/output/*.jp*"):  # assuming JPG, JPEG
             with open(imageName, "rb") as f:
                 images.append(f.read())
 
